@@ -1,11 +1,7 @@
 {
-  "name": "dwp-prototype-index",
+  "name": "dwp-design-examples",
   "version": "1.0.0",
   "description": "Index page to display prototype versions.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "abbott567",
   "license": "ISC"
 }

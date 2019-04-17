@@ -1,0 +1,14 @@
+{
+  "assets": [
+  ],
+  "nunjucksPaths": [
+    "/examples/index-page/",
+    "/examples",
+    "/layouts"
+  ],
+  "sass": [
+    "/_prototype-kit.scss"
+  ],
+  "scripts": [
+  ]
+}
