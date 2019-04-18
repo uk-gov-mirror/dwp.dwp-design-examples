@@ -2,9 +2,7 @@
   "assets": [
   ],
   "nunjucksPaths": [
-    "/examples/index-page/",
-    "/examples",
-    "/layouts"
+    "/examples"
   ],
   "sass": [
     "/_prototype-kit.scss"

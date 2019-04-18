@@ -1,0 +1,45 @@
+{% macro dwpTimeline(params) %}
+  {% if params.reverse === 'true'%}
+    {% set entries = params.entries | reverse %}
+  {% else %}
+    {% set entries = params.entries %}
+  {% endif%}
+
+  <h2 class="govuk-heading-m">
+    {{params.heading}}
+  </h2>
+  <ol class="dwp-timeline">
+    {% for entry in entries %}
+      <li class="dwp-timeline__entry">
+        <h3 class="dwp-timeline__title">
+          {{entry.details.heading}}
+        </h3>
+        {% if entry.details %}
+          <p class="dwp-timeline__info">
+            <span class="govuk-visually-hidden visually-hidden">
+              {{entry.details.heading}}
+            </span>
+
+            {% if entry.details.author %}
+              <span class="dwp-timeline__author">
+                By {{entry.details.author}}
+              </span>
+            {% endif %}
+
+            {% if entry.details.date %}
+              <span class="dwp-timeline__date">
+                {{entry.details.date}} {{" at " + entry.details.time if entry.details.time}}
+              </span>
+            {% endif%}
+          </p>
+        {% endif %}
+
+        {% if entry.details.body %}
+          <p class="dwp-timeline__body">
+            {{entry.details.body}}
+          </p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+{% endmacro %}
