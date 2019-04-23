@@ -1,0 +1,117 @@
+
+{# The extends tag points to a different template than usual so be sure to include this #}
+{% extends "dwp-prototype-index-page.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {# To make an entry the most recent, add the class dwp-prototype-summary--most-recent #}
+      <div class="dwp-prototype-summary dwp-prototype-summary--most-recent">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <dl>
+              <dt class="govuk-heading-s">Date of release</dt>
+              <dd class="govuk-body">2 Feb 2019</dd>
+            </dl>
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+            <dl>
+              <dt class="govuk-heading-s">Feature</dt>
+              <dd class="govuk-body">First feature</dd>
+            </dl>
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+            <dl>
+              <dt class="govuk-heading-s">JIRA story</dt>
+              <dd class="govuk-body">dwp-1111</dd>
+            </dl>
+          </div>
+        </div>
+
+        <h2 class="govuk-heading-m">First feature</h2>
+
+        <h3 class="govuk-heading-s">Changes</h3>
+        <p class="govuk-body">
+          In this version we removed the email address field.
+        </p>
+        <p class="govuk-body">
+          We predict that users won't notice that it's missing as previous research did not show a need for it.
+        </p>
+          
+
+        <h3 class="govuk-heading-s">Research notes</h3>
+        <p class="govuk-body">
+          Not researched yets.
+        </p>
+
+        <br>
+
+        <a href="/version2" class="govuk-button govuk-button--start">
+          Start now
+        </a>
+      </div>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Previous iterations
+          </span>
+        </summary>
+
+        <div class="govuk-details__text">      
+          <div class="dwp-prototype-summary ">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third">
+                <dl>
+                  <dt class="govuk-heading-s">Date of release</dt>
+                  <dd class="govuk-body">1 Jan 2019</dd>
+                </dl>
+              </div>
+
+              <div class="govuk-grid-column-one-third">
+                <dl>
+                  <dt class="govuk-heading-s">Feature</dt>
+                  <dd class="govuk-body">First feature</dd>
+                </dl>
+              </div>
+
+              <div class="govuk-grid-column-one-third">
+                <dl>
+                  <dt class="govuk-heading-s">JIRA story</dt>
+                  <dd class="govuk-body">dwp-1111</dd>
+                </dl>
+              </div>
+            </div>
+
+            <h2 class="govuk-heading-m">First feature</h2>
+
+            <h3 class="govuk-heading-s">Changes</h3>
+            <p class="govuk-body">
+              In this version we removed the email address field.
+            </p>
+          
+            <h3 class="govuk-heading-s">Research notes</h3>
+            <p class="govuk-body">
+              Users didn't have any issues with the contact page.
+            </p>
+          
+            <br>
+
+            <a href="/version1" class="govuk-button govuk-button--start">
+              Launch
+            </a>
+          </div>   
+        </div>
+      </details>
+    </div>
+  </div>
+
+{% endblock %}

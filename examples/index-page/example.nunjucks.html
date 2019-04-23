@@ -1,0 +1,55 @@
+
+{# The extends tag points to a different template than usual so be sure to include this #}
+{% extends "dwp-prototype-index-page.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {# 
+      Nunjucks Macro 
+        Most things can be left blank.
+        buttonText changes the Start text but it will default to Start if left our.
+        changes and research is an array of paragraphs.
+        The first entry will always be the one in the most recent box at the top.
+      #}
+      
+      {{dwpPrototypeSummaries([
+        {
+          dateOfRelease: "2 Feb 2019",
+          feature: "First feature",
+          jiraStory: "dwp-1111",
+          link: "/version2",
+          changes: [
+            "In this version we removed the email address field.",
+            "We predict that users won't notice that it's missing as previous research did not show a need for it."
+          ],
+          research: [
+            "Not researched yet."
+          ]
+        },
+
+        {
+          dateOfRelease: "1 Jan 2019",
+          feature: "First feature",
+          jiraStory: "dwp-1111",
+          link: "/version1",
+          buttonText: "Launch",
+          changes: [
+            "In this version we removed the email address field."
+          ],
+          research: [
+            "Users didn't have any issues with the contact page."
+          ]
+        }
+      ])}}
+      
+    </div>
+</div>
+
+{% endblock %}
