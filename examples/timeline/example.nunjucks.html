@@ -1,0 +1,30 @@
+{# 
+Nunjucks Macro 
+  Time and body are optional.
+  Setting reverse to "true" will reverse the order of the entries.
+#}
+
+{% from "timeline/macro.njk" import dwpTimeline %}
+{{dwpTimeline({
+  heading: "Claim history",
+  reverse: "true",
+  entries: [
+    {
+      details: {
+        heading: "Marriage verified",
+        author: "David Jones",
+        date: "1 Jan 2019",
+        time: "13:00"
+      }
+    },
+    {
+      details: {
+        heading: "Claim disallowed",
+        author: "John Smith",
+        date: "2 Jan 2019",
+        time: "11:00",
+        body: "Claimaint over State Pension age"
+      }
+    }
+  ]
+})}}
