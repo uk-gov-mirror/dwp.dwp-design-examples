@@ -1,0 +1,30 @@
+{# Must go in a header block, not inside content as it wont go full width #}
+{% block header %}
+  {# Header needs declared like it is in layout.html as we're overwriting the block #}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+  
+  {% from "key-details-bar/macro.njk" import dwpKeyDetailsBar %}
+  {{dwpKeyDetailsBar({
+    name: 'John Doe',
+    nino: 'AA 11 22 33 X',
+    status: 'Complete',
+    additional: [
+      {
+        label: 'Date of birth',
+        value: '1 Jan 1990'
+      },
+      {
+        label: 'Mobile',
+        value: '077123456789'
+      }
+        label: 'Language',
+        value: 'Welsh speaker'
+      }
+    ]
+  })}}
+{% endblock %}
