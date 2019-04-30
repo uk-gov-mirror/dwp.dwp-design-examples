@@ -1,0 +1,25 @@
+{% macro dwpHeader(params) %}
+  <header class="govuk-header dwp-header" role="banner" data-module="header">
+    <div class="govuk-header__container govuk-width-container">
+      <div class="govuk-header__content">
+        <a href="#" class="govuk-header__link govuk-header__link--service-name">
+          {{params.serviceName}}
+        </a>
+        {% if params.navigation %}
+          <button type="button" role="button" class="govuk-header__menu-button js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+          <nav>
+            <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+              {% for item in params.navigation %}
+                <li class="govuk-header__navigation-item {{'govuk-header__navigation-item--active' if params.active}}">
+                  <a class="govuk-header__link" href="{{item.href}}">
+                    {{item.text}}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+{% endmacro %}
