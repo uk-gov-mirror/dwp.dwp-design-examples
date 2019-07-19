@@ -1,5 +1,7 @@
 # DWP Design Examples
 
+Point of contact / Approver: Craig Abbott
+
 An extension to quickly get access to some of the developing patterns and 
 components from DWP Design Examples.
 
